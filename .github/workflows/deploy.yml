@@ -17,5 +17,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_KEY }}
 
       - name: Upload files to S3
-        run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*"
+        run:  aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
